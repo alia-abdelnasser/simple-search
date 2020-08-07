@@ -22,14 +22,15 @@
         submitBtn.disabled = true;
 
         let term = searchInput.value.toLowerCase().trim();
+        cards.innerHTML = '';
 
-        get(searchUrl + '&keyword=' + term, function (res) {
-            if (res.articles.length > 0) {
-                res.articles.forEach(element => {
+        get(searchUrl + '?keyword=' + term, function (res) {
+            if (res[0] && res[0].articles && res[0].articles.length > 0) {
+                res[0].articles.forEach(element => {
                     buildCard(element);
                 });
             } else {
-                buildCard({ title: "No data", description: "no result were returned", url: "#" })
+                buildCard({ title: "No data", description: "no result were returned", url: null })
             }
             // enable button
             submitBtn.disabled = false;
@@ -38,11 +39,15 @@
 
     function buildCard(article) {
         const div = document.createElement('div');
-        div.insertAdjacentHTML('beforeend', `
-            <h3>${article.title}</h3>
-            <small>${article.description}</small>
-            <a href='${article.url}'>Read ME</a>
-        `);
+        let cardHtml = `
+        <h3>${article.title}</h3>
+        <small>${article.description} </small>
+        `;
+        if (article.url) {
+            cardHtml += `<small><a href='${article.url}'>READ MORE</a></small>`;
+        }
+
+        div.insertAdjacentHTML('beforeend', cardHtml);
 
         cards.appendChild(div);
     }
