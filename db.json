@@ -1,21 +1,25 @@
 {
     "articles": [
         {
+            "keyword": "apple",
             "title": "Apple a day",
             "description": "Keeps doctor away",
             "url": "apple-fruit"
         },
         {
+            "keyword": "apple",
             "title": "Apple is better",
             "description": "than other companies",
             "url": "apple-company"
         },
         {
+            "keyword": "apple",
             "title": "Man has Apple",
             "description": "In his neck",
             "url": "apple-body"
         },
         {
+            "keyword": "apple",
             "title": "Apple fell on",
             "description": "a scientest",
             "url": "apple-science"

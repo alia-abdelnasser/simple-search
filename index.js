@@ -21,9 +21,9 @@
         // disable button
         submitBtn.disabled = true;
 
-        let term = searchInput.value.trim();
+        let term = searchInput.value.toLowerCase().trim();
 
-        get(searchUrl + '&q=' + term, function (res) {
+        get(searchUrl + '&keyword=' + term, function (res) {
             if (res.articles.length > 0) {
                 res.articles.forEach(element => {
                     buildCard(element);
