@@ -1,0 +1,24 @@
+{
+    "articles": [
+        {
+            "title": "Apple a day",
+            "description": "Keeps doctor away",
+            "url": "apple-fruit"
+        },
+        {
+            "title": "Apple is better",
+            "description": "than other companies",
+            "url": "apple-company"
+        },
+        {
+            "title": "Man has Apple",
+            "description": "In his neck",
+            "url": "apple-body"
+        },
+        {
+            "title": "Apple fell on",
+            "description": "a scientest",
+            "url": "apple-science"
+        }
+    ]
+}
