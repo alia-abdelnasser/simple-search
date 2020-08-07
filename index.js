@@ -1,5 +1,5 @@
 (function () {
-    var searchUrl = 'https://my-json-server.typicode.com/alia-abdelnasser/simple-search/articles';
+    var searchUrl = 'https://my-json-server.typicode.com/alia-abdelnasser/simple-search/headlines';
 
     var searchInput = document.querySelector('#searchInput');
 
